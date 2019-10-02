@@ -1,4 +1,4 @@
-apply from: "https://raw.githubusercontent.com/diareuse/gradle-git-android-version/semantic/git-version.gradle"
+apply from: "https://raw.githubusercontent.com/diareuse/gradle-git-android-version/integration/git-version.gradle"
 
 subprojects {
     afterEvaluate {
