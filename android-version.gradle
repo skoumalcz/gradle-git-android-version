@@ -1,0 +1,24 @@
+apply from: "https://raw.githubusercontent.com/diareuse/gradle-git-android-version/master/git-version.gradle"
+
+subprojects {
+    afterEvaluate {
+        String androidApp = "com.android.application"
+        
+        if (!plugins.hasPlugin(androidApp)) {
+            return
+        }
+
+        android.applicationVariants.all { variant ->
+            def myVersionName = describeVersionName(variant)
+            def myVersionCode = describeVersionCode(myVersionName)
+
+            println "> Task :${project.name}:${variant.name}:version [$myVersionName ($myVersionCode)]"
+
+            variant.outputs.all { output ->
+                output.versionCodeOverride = myVersionCode
+                output.versionNameOverride = myVersionName
+            }
+        }
+        
+    }
+}
