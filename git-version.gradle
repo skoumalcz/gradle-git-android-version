@@ -3,7 +3,7 @@ ext {
         def stdout = new ByteArrayOutputStream()
         try {
             exec {
-                commandLine "git", "describe", "--match", "${variant}/*", "--long"
+                commandLine "git", "describe", "--match", "*/*.*.*", "--long"
                 standardOutput = stdout
             }
             def longTag = stdout.toString().trim()

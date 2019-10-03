@@ -9,7 +9,7 @@ subprojects {
         }
 
         android.applicationVariants.all { variant ->
-            def myVersionName = describeVersionName(variant)
+            def myVersionName = describeVersionName()
             def myVersionCode = describeVersionCode(myVersionName)
 
             println "> Task :${project.name}:${variant.name}:version [$myVersionName ($myVersionCode)]"
