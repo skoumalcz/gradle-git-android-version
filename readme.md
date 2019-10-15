@@ -3,7 +3,7 @@
 Append this to the bottom of your **root** `build.gradle`:
 
 ```groovy
-apply from: "https://raw.githubusercontent.com/diareuse/gradle-git-android-version/semantic/android-version.gradle"
+apply from: "https://raw.githubusercontent.com/skoumalcz/gradle-git-android-version/semantic/android-version.gradle"
 ```
 
 It will automatically set your versions according to rules of semantic versioning. It searches for 
