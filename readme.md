@@ -1,3 +1,7 @@
+### EOL (DEPRECATED)
+
+Use [teanity plugin](https://github.com/skoumalcz/teanity-plugin) for the same result
+
 ## ✨ automagic! ✨
 
 Append this to the bottom of your **root** `build.gradle`:
